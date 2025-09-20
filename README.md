@@ -39,21 +39,28 @@ This notebook performs single-cell RNA-seq analysis of the **OVCA420 Kinase Inhi
 - Packages: `Seurat`, `ggplot2`, `data.table`, `patchwork`, `ggpubr`
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 # Data Visualization with ggplot2
 
-This Jupyter Notebook demonstrates basic data visualization and statistical comparison using the **ggplot2** R library. It visualizes gene expression data from the GSE118407 dataset.
+This notebook demonstrates basic data visualization and statistical comparison using the **ggplot2** R library.  
+Analysis was performed on gene expression data from the **GSE118407 dataset**.
 
-## Analysis
+---
 
-The script:
-1.  Defines two small datasets, "Control" and "shGRHL2."
-2.  Calculates the mean and standard deviation for each group.
-3.  Creates a bar plot with error bars to visually compare the two groups.
+## ⚙️ Workflow
+1. Define two datasets: **Control** and **shGRHL2**.  
+2. Compute mean and standard deviation for each group.  
+3. Generate a bar plot with error bars to compare groups.  
 
-## Visualization
+---
 
-The final output is a bar plot showing the average gene expression for the control and GRHL2-knockdown conditions, with error bars representing one standard deviation.
+## 📊 Outputs
+- Bar plot of average gene expression for Control vs. shGRHL2.  
+- Error bars represent ±1 standard deviation.  
 
+---
+
+## 🛠️ Requirements
+- R (≥ 4.0)  
+- Packages: `ggplot2`  
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
