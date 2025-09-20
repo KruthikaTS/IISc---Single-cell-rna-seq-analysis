@@ -1,37 +1,44 @@
-# IISc---Single-cell-rna-seq-analysis
-This repository contains R scripts for bioinformatics and data analysis. The scripts include a single-cell RNA sequencing workflow using the Seurat package, as well as scripts for generating common statistical plots like bar charts with error bars, GEO2R plots, Pearson correlation plots.
+# Single-Cell RNA Sequence Analysis (IISc Internship)
+
+This repository contains R scripts developed during my internship at the **Indian Institute of Science (IISc)**.  
+It includes:  
+- A single-cell RNA sequencing workflow (Seurat)  
+- GEO2R differential expression plots  
+- Pearson correlation plots  
+- Statistical visualizations (e.g., bar plots with error bars)  
 
 
-# Single-Cell RNA Sequencing Analysis with Seurat
+#Single-Cell RNA-seq Analysis 
 
-This Jupyter Notebook performs a standard single-cell RNA sequencing analysis workflow using the **Seurat** R package.
+This notebook performs single-cell RNA-seq analysis of the **OVCA420 Kinase Inhibitor Screen dataset** using Seurat.
 
-## Overview
+---
 
-The notebook processes raw gene expression data (UMI matrix) and associated metadata from a kinase screen to create a Seurat object. This object is the foundation for further downstream analysis, such as normalization, dimensionality reduction, and clustering.
+## ⚙️ Workflow
+1. **Data Input**: UMI matrix, barcodes, annotations, metadata (from GEO: GSE147405).  
+2. **Seurat Object**: Construct with raw counts + metadata.  
+3. **QC**: Filter low-quality cells by features, counts, and mitochondrial %.
+4. **Processing**: Normalize, find variable genes, scale data.  
+5. **Clustering & Dimensionality Reduction**: PCA, neighbors, clustering, UMAP.  
+6. **Visualization**:  
+   - UMAP by clusters & conditions  
+   - FeaturePlots (e.g., EBF1)  
+   - Violin plots for gene expression  
 
-## Key Steps
+---
 
-1.  **Setup**: Installs and loads necessary R libraries including `Seurat`, `data.table`, `ggplot2`, and `patchwork`.
-2.  **Data Preparation**: Unzips and reads the UMI matrix and metadata files.
-3.  **Seurat Object Creation**: Constructs a Seurat object from the UMI matrix and integrates the cleaned metadata.
+## 📊 Outputs
+- UMAP embeddings  
+- Gene expression plots  
+- QC filtering results  
 
-## Data
+---
 
-The analysis relies on two primary data files:
-- `KinaseScreen_UMI_matrix.csv.gz`
-- `KinaseScreen_metadata.csv.gz`
+## 🛠️ Requirements
+- R (≥ 4.0)  
+- Packages: `Seurat`, `ggplot2`, `data.table`, `patchwork`, `ggpubr`
 
-## Dependencies
-
-The following R packages are required to run this notebook:
-- Seurat
-- data.table
-- ggplot2
-- patchwork
-- ggpubr
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Data Visualization with ggplot2
 
@@ -47,3 +54,6 @@ The script:
 ## Visualization
 
 The final output is a bar plot showing the average gene expression for the control and GRHL2-knockdown conditions, with error bars representing one standard deviation.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
