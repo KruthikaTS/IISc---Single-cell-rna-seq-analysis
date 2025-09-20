@@ -7,12 +7,11 @@ It includes:
 - Pearson correlation plots  
 - Statistical visualizations (e.g., bar plots with error bars)  
 
-
+---
 #Single-Cell RNA-seq Analysis 
 
 This notebook performs single-cell RNA-seq analysis of the **OVCA420 Kinase Inhibitor Screen dataset** using Seurat.
 
----
 
 ## ⚙️ Workflow
 1. **Data Input**: UMI matrix, barcodes, annotations, metadata (from GEO: GSE147405).  
